@@ -45,7 +45,7 @@ public class DocGenerator {
 	
 	/**
 	 * 加载文档
-	 * @throws IOException 
+	 * @throws IOException 文件无法找到时抛出异常
 	 */
 	public void loadDocument() throws IOException {
 		FileInputStream ifstream = new FileInputStream(docPath);
@@ -66,7 +66,7 @@ public class DocGenerator {
 	
 	/**
 	 * 保存渲染的文档
-	 * @throws IOException
+	 * @throws IOException 文件路径无法找到时抛出异常
 	 */
 	public void saveDocument() throws IOException {
 		FileOutputStream ofStream = new FileOutputStream(docSavePath);
@@ -76,9 +76,6 @@ public class DocGenerator {
 	
 	/** 
      * 替换段落里面的变量 
-     * 
-     * @param doc    要替换的文档 
-     * @param params 参数 
      */  
     public void replaceInDoc() {  
         Iterator<XWPFParagraph> iterator = docuemnt.getParagraphsIterator();  
@@ -91,7 +88,6 @@ public class DocGenerator {
   
     /** 
      * 替换段落里面的变量 
-     * 
      * @param para   要替换的段落 
      * @param params 参数 
      */  
@@ -183,8 +179,8 @@ public class DocGenerator {
     /** 
      * 正则匹配字符串 
      * 
-     * @param str 
-     * @return 
+     * @param str 正则表达式
+     * @return 匹配器
      */  
     private Matcher matcher(String str) {  
         Pattern pattern = Pattern.compile("\\$\\{(.+?)\\}", Pattern.CASE_INSENSITIVE);  

@@ -26,6 +26,7 @@ public class DocTableField implements IDocField {
 	
 	/**
 	 * 构造函数
+	 * @param headers 表头
 	 * @param content 表格内容
 	 */
 	public DocTableField(List<DocTableFieldHeader> headers, List<Map<String, DocTableFieldCell>> content) {
