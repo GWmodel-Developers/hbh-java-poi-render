@@ -6,6 +6,11 @@ import org.apache.poi.xwpf.usermodel.UnderlinePatterns;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.apache.poi.xwpf.usermodel.XWPFRun;
 
+/**
+ * 文档单子段
+ * @author huyigong
+ *
+ */
 public class DocElementField implements IDocField {
 	/**
 	 * 字段值
